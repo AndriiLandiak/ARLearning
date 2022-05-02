@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		66F8FBCF281FBC6A005DB959 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FBCE281FBC6A005DB959 /* AppDelegate.swift */; };
 		66F8FBD1281FBC6A005DB959 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FBD0281FBC6A005DB959 /* ContentView.swift */; };
-		66F8FBD3281FBC6A005DB959 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FBD2281FBC6A005DB959 /* Experience.rcproject */; };
 		66F8FBD5281FBC6E005DB959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F8FBD4281FBC6E005DB959 /* Assets.xcassets */; };
 		66F8FBD8281FBC6E005DB959 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F8FBD7281FBC6E005DB959 /* Preview Assets.xcassets */; };
 		66F8FBE2281FBC6E005DB959 /* CourseWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FBE1281FBC6E005DB959 /* CourseWorkTests.swift */; };
 		66F8FBEC281FBC6E005DB959 /* CourseWorkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FBEB281FBC6E005DB959 /* CourseWorkUITests.swift */; };
 		66F8FBEE281FBC6E005DB959 /* CourseWorkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FBED281FBC6E005DB959 /* CourseWorkUITestsLaunchTests.swift */; };
+		66F8FBFC281FBFBB005DB959 /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66F8FBFB281FBFBB005DB959 /* toy_robot_vintage.usdz */; };
+		66F8FBFF281FC16C005DB959 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66F8FBFD281FC16B005DB959 /* toy_biplane.usdz */; };
+		66F8FC00281FC16C005DB959 /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66F8FBFE281FC16C005DB959 /* tv_retro.usdz */; };
+		66F8FC02281FD60D005DB959 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FC01281FD60D005DB959 /* Model.swift */; };
+		66F8FC05281FDB13005DB959 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 66F8FC04281FDB13005DB959 /* FocusEntity */; };
+		66F8FC07281FDD26005DB959 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FC06281FDD25005DB959 /* CustomARView.swift */; };
+		66F8FC0D2820077F005DB959 /* ModelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FC0C2820077F005DB959 /* ModelPickerView.swift */; };
+		66F8FC1028200ABF005DB959 /* ButtonPlacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FC0F28200ABF005DB959 /* ButtonPlacementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +45,6 @@
 		66F8FBCB281FBC6A005DB959 /* CourseWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F8FBCE281FBC6A005DB959 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F8FBD0281FBC6A005DB959 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		66F8FBD2281FBC6A005DB959 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		66F8FBD4281FBC6E005DB959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66F8FBD7281FBC6E005DB959 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		66F8FBDD281FBC6E005DB959 /* CourseWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CourseWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +52,13 @@
 		66F8FBE7281FBC6E005DB959 /* CourseWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CourseWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F8FBEB281FBC6E005DB959 /* CourseWorkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseWorkUITests.swift; sourceTree = "<group>"; };
 		66F8FBED281FBC6E005DB959 /* CourseWorkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseWorkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		66F8FBFB281FBFBB005DB959 /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot_vintage.usdz; sourceTree = "<group>"; };
+		66F8FBFD281FC16B005DB959 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
+		66F8FBFE281FC16C005DB959 /* tv_retro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv_retro.usdz; sourceTree = "<group>"; };
+		66F8FC01281FD60D005DB959 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		66F8FC06281FDD25005DB959 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		66F8FC0C2820077F005DB959 /* ModelPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPickerView.swift; sourceTree = "<group>"; };
+		66F8FC0F28200ABF005DB959 /* ButtonPlacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPlacementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F8FC05281FDB13005DB959 /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,10 +110,12 @@
 		66F8FBCD281FBC6A005DB959 /* CourseWork */ = {
 			isa = PBXGroup;
 			children = (
-				66F8FBCE281FBC6A005DB959 /* AppDelegate.swift */,
 				66F8FBD0281FBC6A005DB959 /* ContentView.swift */,
-				66F8FBD2281FBC6A005DB959 /* Experience.rcproject */,
+				66F8FC0E28200AA8005DB959 /* Views */,
+				66F8FC01281FD60D005DB959 /* Model.swift */,
 				66F8FBD4281FBC6E005DB959 /* Assets.xcassets */,
+				66F8FBCE281FBC6A005DB959 /* AppDelegate.swift */,
+				66F8FBFA281FBF97005DB959 /* Models */,
 				66F8FBD6281FBC6E005DB959 /* Preview Content */,
 			);
 			path = CourseWork;
@@ -130,6 +146,26 @@
 			path = CourseWorkUITests;
 			sourceTree = "<group>";
 		};
+		66F8FBFA281FBF97005DB959 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66F8FBFD281FC16B005DB959 /* toy_biplane.usdz */,
+				66F8FBFE281FC16C005DB959 /* tv_retro.usdz */,
+				66F8FBFB281FBFBB005DB959 /* toy_robot_vintage.usdz */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		66F8FC0E28200AA8005DB959 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				66F8FC06281FDD25005DB959 /* CustomARView.swift */,
+				66F8FC0C2820077F005DB959 /* ModelPickerView.swift */,
+				66F8FC0F28200ABF005DB959 /* ButtonPlacementView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +182,9 @@
 			dependencies = (
 			);
 			name = CourseWork;
+			packageProductDependencies = (
+				66F8FC04281FDB13005DB959 /* FocusEntity */,
+			);
 			productName = CourseWork;
 			productReference = 66F8FBCB281FBC6A005DB959 /* CourseWork.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +257,9 @@
 				Base,
 			);
 			mainGroup = 66F8FBC2281FBC6A005DB959;
+			packageReferences = (
+				66F8FC03281FDB13005DB959 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = 66F8FBCC281FBC6A005DB959 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +278,9 @@
 			files = (
 				66F8FBD8281FBC6E005DB959 /* Preview Assets.xcassets in Resources */,
 				66F8FBD5281FBC6E005DB959 /* Assets.xcassets in Resources */,
+				66F8FBFF281FC16C005DB959 /* toy_biplane.usdz in Resources */,
+				66F8FC00281FC16C005DB959 /* tv_retro.usdz in Resources */,
+				66F8FBFC281FBFBB005DB959 /* toy_robot_vintage.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +305,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F8FC0D2820077F005DB959 /* ModelPickerView.swift in Sources */,
+				66F8FC02281FD60D005DB959 /* Model.swift in Sources */,
+				66F8FC1028200ABF005DB959 /* ButtonPlacementView.swift in Sources */,
 				66F8FBD1281FBC6A005DB959 /* ContentView.swift in Sources */,
+				66F8FC07281FDD26005DB959 /* CustomARView.swift in Sources */,
 				66F8FBCF281FBC6A005DB959 /* AppDelegate.swift in Sources */,
-				66F8FBD3281FBC6A005DB959 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CourseWork/Preview Content\"";
+				DEVELOPMENT_TEAM = K6YJYNFCN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -451,6 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CourseWork/Preview Content\"";
+				DEVELOPMENT_TEAM = K6YJYNFCN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -585,6 +635,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66F8FC03281FDB13005DB959 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66F8FC04281FDB13005DB959 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66F8FC03281FDB13005DB959 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66F8FBC3281FBC6A005DB959 /* Project object */;
 }
