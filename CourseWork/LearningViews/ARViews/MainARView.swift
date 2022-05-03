@@ -37,7 +37,8 @@ struct MainARView : View {
             } else {
                 ModelPickerView(isPlacementEnabled: self.$isPlacementEnabled, selectedModel: $selectedModel, models: self.models)
             }
-        }
+        }.navigationBarTitleDisplayMode(.inline)
+        .background(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
     }
 }
 

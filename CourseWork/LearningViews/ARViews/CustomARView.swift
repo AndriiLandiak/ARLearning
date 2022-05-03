@@ -24,7 +24,6 @@ class CustomARView: ARView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     private func configure() {
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = [.horizontal, .vertical]

@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct Answer: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct Answer: Identifiable {
+    var id = UUID()
+    var text: AttributedString
+    var isCorrect: Bool
 }
 

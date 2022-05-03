@@ -9,12 +9,15 @@ import SwiftUI
 
 struct LearningView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            NavigationLink {
+                MainARView()
+            } label: {
+                PrimaryButton(text: "AR")
+            }.frame(maxWidth: .infinity, maxHeight: .infinity)
+             .edgesIgnoringSafeArea(.all)
+             .background(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
+        }
     }
 }
 
-struct LearningView_Previews: PreviewProvider {
-    static var previews: some View {
-        LearningView()
-    }
-}

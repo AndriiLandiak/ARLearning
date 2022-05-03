@@ -29,6 +29,5 @@ struct ModelPickerView: View {
                 }
             }
         }.padding(20)
-        .background(Color.black.opacity(0.5))
     }
 }

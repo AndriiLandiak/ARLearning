@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
-import RealityKit
-import ARKit
-import FocusEntity
 
-struct ContentView : View {
+struct Homescreen : View {
     var body: some View {
-        
+        TabView {
+            AccountView().tabItem { Label("Account", systemImage: "house") }
+            LearningView().tabItem { Label("Learning", systemImage: "book") }
+            QuizView().tabItem { Label("Quiz", systemImage: "circle.grid.cross")}
+        }
     }
 }
