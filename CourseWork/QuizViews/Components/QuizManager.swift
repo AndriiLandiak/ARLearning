@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 class QuizManager: ObservableObject {
     private(set) var quiz: [QuestionModel.Result] = []
@@ -24,28 +25,82 @@ class QuizManager: ObservableObject {
         }
     }
     
+//    func fetchQuiz() async {
+//        var link:[String] = []
+//        if link.isEmpty {
+//            let tempURL = URL(string: "https://gist.github.com/AndriiLandiak/8081dcf2142cab62ab47da7068b62466")!
+//            let task = URLSession.shared.dataTask(with: tempURL) {(data, response, error) in
+//                guard let data = data else { return }
+//                let result = (String(data: data, encoding: .utf8)!)
+//                link = self.matches(for: "/raw/[a-z0-9]*/[a-z]*.json", in: result)
+//            }
+//            print("link = ", link)
+//            task.resume()
+//        } else {
+//            print("got matched")
+//            guard let url = URL(string: "https://gist.githubusercontent.com/AndriiLandiak/8081dcf2142cab62ab47da7068b62466" + link[0]) else { fatalError("Missing URL")}
+//            let urlRequest = URLRequest(url: url)
+//            do {
+//                let (data, response) = try await URLSession.shared.data(for: urlRequest)
+//                guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data")}
+//                let decoder = JSONDecoder()
+//                decoder.keyDecodingStrategy = .convertFromSnakeCase
+//                let decodedData = try decoder.decode(QuestionModel.self, from: data)
+//
+//                DispatchQueue.main.async {
+//                    self.reachedEnd = false
+//                    self.index = 0
+//                    self.progress = 0.0
+//                    self.score = 0
+//                    self.quiz = decodedData.results
+//                    self.length = self.quiz.count
+//                    self.setQuestion()
+//                }
+//            } catch {
+//                print("Error - \(error)")
+//            }
+//        }
+//     }
+    
     func fetchQuiz() async {
-        guard let url = URL(string: "https://gist.githubusercontent.com/AndriiLandiak/8081dcf2142cab62ab47da7068b62466/raw/d702bed6a5eb3ea6916c4b0b05d55e026eb89806/quetions.json") else { fatalError("Missing URL")}
-        let urlRequest = URLRequest(url: url)
-        do {
-            let (data, response) = try await URLSession.shared.data(for: urlRequest)
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data")}
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            let decodedData = try decoder.decode(QuestionModel.self, from: data)
-            
-            DispatchQueue.main.async {
-                self.reachedEnd = false
-                self.index = 0
-                self.progress = 0.0
-                self.score = 0
-                self.quiz = decodedData.results
-                self.length = self.quiz.count
-                self.setQuestion()
+        let link = await fetchTempLink()
+        guard let url = URL(string: "https://gist.githubusercontent.com/AndriiLandiak/8081dcf2142cab62ab47da7068b62466" + link) else { fatalError("Missing URL")}
+            let urlRequest = URLRequest(url: url)
+            do {
+                let (data, response) = try await URLSession.shared.data(for: urlRequest)
+                guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data")}
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let decodedData = try decoder.decode(QuestionModel.self, from: data)
+                
+                DispatchQueue.main.async {
+                    self.reachedEnd = false
+                    self.index = 0
+                    self.progress = 0.0
+                    self.score = 0
+                    self.quiz = decodedData.results
+                    self.length = self.quiz.count
+                    self.setQuestion()
+                }
+            } catch {
+                print("Error - \(error)")
             }
-        } catch {
-            print("Error - \(error)")
-        }
+     }
+    
+    func fetchTempLink() async -> String {
+        var link:[String] = []
+        guard let tempURL = URL(string: "https://gist.github.com/AndriiLandiak/8081dcf2142cab62ab47da7068b62466") else { fatalError("Missing URL")}
+        let tempUrlRequest = URLRequest(url: tempURL)
+            do {
+                let (data, response) = try await URLSession.shared.data(for: tempUrlRequest)
+                guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data")}
+                let result = (String(data: data, encoding: .utf8)!)
+                link = self.matches(for: "/raw/[a-z0-9]*/[a-z]*.json", in: result)
+                DispatchQueue.main.async {}
+            } catch {
+                print("Error - \(error)")
+            }
+        return link[0]
      }
     
     
@@ -73,6 +128,18 @@ class QuizManager: ObservableObject {
         answerSelected = true
         if answer.isCorrect {
             score += 1
+        }
+    }
+    
+    func matches(for regex: String, in text: String) -> [String] {
+        do {
+            let regex = try NSRegularExpression(pattern: regex)
+            let nsString = text as NSString
+            let results = regex.matches(in: text, range: NSRange(location: 0, length: nsString.length))
+            return results.map { nsString.substring(with: $0.range)}
+        } catch let error {
+            print("invalid regex: \(error.localizedDescription)")
+            return []
         }
     }
 }
