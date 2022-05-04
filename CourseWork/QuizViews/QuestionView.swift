@@ -8,28 +8,34 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @EnvironmentObject var quizManager: QuizManager
     var body: some View {
         VStack(spacing: 40) {
             HStack {
                 Text("Quiz Game").mainTitle()
                 Spacer()
-                Text("1 out of 10")
+                Text("\(quizManager.index + 1) out of \(quizManager.length)")
                     .foregroundColor(Color("AppColor"))
                     .fontWeight(.heavy)
             }
-            ProgressBar(progress: 40)
+            ProgressBar(progress: quizManager.progress)
             VStack(alignment: .leading, spacing: 20) {
-                Text("Who is nigga?")
+                Text(quizManager.question)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.gray)
-                AnswerRow(answer: Answer(text: "Nigga", isCorrect: true))
-                AnswerRow(answer: Answer(text: "Not nigga", isCorrect: false))
-                AnswerRow(answer: Answer(text: "Not nigga", isCorrect: false))
-                AnswerRow(answer: Answer(text: "Not nigga", isCorrect: false))
+                ForEach(quizManager.answerChoices, id: \.id) { answer in
+                    AnswerRow(answer: answer)
+                        .environmentObject(quizManager)
+                }
                 
             }
-            PrimaryButton(text: "Next")
+            Button {
+                quizManager.goToNextQuestion()
+            } label: {
+                PrimaryButton(text: "Next", background: quizManager.answerSelected ? Color("AppColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+            }
+            .disabled(!quizManager.answerSelected)
             Spacer()
         }
         .padding(.top, 30)
@@ -38,11 +44,5 @@ struct QuestionView: View {
         .edgesIgnoringSafeArea(.all)
         .background(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
         .navigationBarHidden(true)
-    }
-}
-
-struct QuestionView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuestionView()
     }
 }

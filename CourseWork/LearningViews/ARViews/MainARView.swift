@@ -37,7 +37,11 @@ struct MainARView : View {
             } else {
                 ModelPickerView(isPlacementEnabled: self.$isPlacementEnabled, selectedModel: $selectedModel, models: self.models)
             }
-        }.navigationBarTitleDisplayMode(.inline)
+        }
+        .onDisappear() {
+            
+        }
+        .navigationBarTitleDisplayMode(.inline)
         .background(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
     }
 }
@@ -69,7 +73,6 @@ struct ARViewContainer: UIViewRepresentable {
         let anchorEntity = AnchorEntity(plane: .any)
         anchorEntity.addChild(clonedEntity)
         anchorEntity.name = "MyAnchor"
-        
         arView.scene.addAnchor(anchorEntity)
         arView.enableObjectDeletion()
     }
@@ -91,7 +94,6 @@ class SceneManager: ObservableObject {
         }
     }()
     
-    // Verify that scene data can be loaded from filesystem
     var scenePersistenceData: Data? {
         return try? Data(contentsOf: persistenceUrl)
     }

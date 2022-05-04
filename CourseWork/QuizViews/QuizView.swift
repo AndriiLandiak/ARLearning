@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct QuizView: View {
+    @StateObject var quizManager = QuizManager()
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 40) {
@@ -18,7 +20,8 @@ struct QuizView: View {
                         .foregroundColor(Color("AppColor"))
                 }
                 NavigationLink {
-                    QuestionView()
+                    EndGameView()
+                        .environmentObject(quizManager)
                 } label: {
                     PrimaryButton(text: "Let's go")
                 }
@@ -27,11 +30,5 @@ struct QuizView: View {
             .edgesIgnoringSafeArea(.all)
             .background(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
         }
-    }
-}
-
-struct QuizView_Preview: PreviewProvider {
-    static var previews: some View {
-        QuizView()
     }
 }

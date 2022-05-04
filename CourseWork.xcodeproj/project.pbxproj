@@ -12,6 +12,9 @@
 		669316DC28215274001FE388 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 669316D928215273001FE388 /* toy_biplane.usdz */; };
 		669316DD28215274001FE388 /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 669316DA28215274001FE388 /* toy_robot_vintage.usdz */; };
 		669316DE28215274001FE388 /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 669316DB28215274001FE388 /* tv_retro.usdz */; };
+		669316E028226C51001FE388 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669316DF28226C51001FE388 /* QuestionModel.swift */; };
+		669316E228226E3B001FE388 /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669316E128226E3B001FE388 /* QuizManager.swift */; };
+		669316E4282279DC001FE388 /* EndGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669316E3282279DC001FE388 /* EndGameView.swift */; };
 		66F8FBCF281FBC6A005DB959 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FBCE281FBC6A005DB959 /* AppDelegate.swift */; };
 		66F8FBD1281FBC6A005DB959 /* Homescreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FBD0281FBC6A005DB959 /* Homescreen.swift */; };
 		66F8FBD5281FBC6E005DB959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F8FBD4281FBC6E005DB959 /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 		669316D928215273001FE388 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
 		669316DA28215274001FE388 /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot_vintage.usdz; sourceTree = "<group>"; };
 		669316DB28215274001FE388 /* tv_retro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv_retro.usdz; sourceTree = "<group>"; };
+		669316DF28226C51001FE388 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		669316E128226E3B001FE388 /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
+		669316E3282279DC001FE388 /* EndGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameView.swift; sourceTree = "<group>"; };
 		66F8FBCB281FBC6A005DB959 /* CourseWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F8FBCE281FBC6A005DB959 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F8FBD0281FBC6A005DB959 /* Homescreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homescreen.swift; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 			children = (
 				66F8FC01281FD60D005DB959 /* ARModel.swift */,
 				669316D72821460F001FE388 /* AnswerModel.swift */,
+				669316DF28226C51001FE388 /* QuestionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +219,7 @@
 			children = (
 				66F8FC3228212B7A005DB959 /* QuizView.swift */,
 				66F8FC4E2821432D005DB959 /* QuestionView.swift */,
+				669316E3282279DC001FE388 /* EndGameView.swift */,
 				66F8FC5228214561005DB959 /* Components */,
 			);
 			path = QuizViews;
@@ -220,8 +228,8 @@
 		66F8FC4928213DC7005DB959 /* LearningViews */ = {
 			isa = PBXGroup;
 			children = (
-				66F8FC0E28200AA8005DB959 /* ARViews */,
 				66F8FC4A28213DE3005DB959 /* LearningView.swift */,
+				66F8FC0E28200AA8005DB959 /* ARViews */,
 			);
 			path = LearningViews;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 		66F8FC5228214561005DB959 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				669316E128226E3B001FE388 /* QuizManager.swift */,
 				66F8FC50282143EE005DB959 /* ProgressBar.swift */,
 				66F8FC36282137AD005DB959 /* PrimaryButton.swift */,
 				669316D4282145D0001FE388 /* AnswerRow.swift */,
@@ -376,9 +385,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F8FC0D2820077F005DB959 /* ModelPickerView.swift in Sources */,
+				669316E4282279DC001FE388 /* EndGameView.swift in Sources */,
 				66F8FC02281FD60D005DB959 /* ARModel.swift in Sources */,
 				66F8FC37282137AD005DB959 /* PrimaryButton.swift in Sources */,
 				66F8FC3328212B7A005DB959 /* QuizView.swift in Sources */,
+				669316E228226E3B001FE388 /* QuizManager.swift in Sources */,
 				66F8FC2F282129A5005DB959 /* MainARView.swift in Sources */,
 				66F8FC4B28213DE3005DB959 /* LearningView.swift in Sources */,
 				66F8FC51282143EE005DB959 /* ProgressBar.swift in Sources */,
@@ -390,6 +401,7 @@
 				66F8FBD1281FBC6A005DB959 /* Homescreen.swift in Sources */,
 				66F8FC07281FDD26005DB959 /* CustomARView.swift in Sources */,
 				669316D5282145D0001FE388 /* AnswerRow.swift in Sources */,
+				669316E028226C51001FE388 /* QuestionModel.swift in Sources */,
 				66F8FBCF281FBC6A005DB959 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

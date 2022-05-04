@@ -13,6 +13,8 @@ struct Homescreen : View {
             AccountView().tabItem { Label("Account", systemImage: "house") }
             LearningView().tabItem { Label("Learning", systemImage: "book") }
             QuizView().tabItem { Label("Quiz", systemImage: "circle.grid.cross")}
-        }
+        }.colorMultiply(.white)
+            .edgesIgnoringSafeArea(.top)
+            .accentColor(.black)
     }
 }
