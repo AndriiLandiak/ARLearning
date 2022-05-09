@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66194A662829581200313B8D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 66194A652829581200313B8D /* FirebaseAuth */; };
+		66194A6A282960D300313B8D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66194A69282960D300313B8D /* SignUpViewModel.swift */; };
 		669316D5282145D0001FE388 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669316D4282145D0001FE388 /* AnswerRow.swift */; };
 		669316D82821460F001FE388 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669316D72821460F001FE388 /* AnswerModel.swift */; };
 		669316DC28215274001FE388 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 669316D928215273001FE388 /* toy_biplane.usdz */; };
@@ -58,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66194A69282960D300313B8D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		669316D4282145D0001FE388 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 		669316D72821460F001FE388 /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
 		669316D928215273001FE388 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F8FC4328213CCA005DB959 /* FocusEntity in Frameworks */,
+				66194A662829581200313B8D /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +139,7 @@
 				6697D85B28290519008A346F /* ErrorView.swift */,
 				6697D85D2829052E008A346F /* Login.swift */,
 				6697D85F28290537008A346F /* SignUp.swift */,
+				66194A69282960D300313B8D /* SignUpViewModel.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			name = CourseWork;
 			packageProductDependencies = (
 				66F8FC4228213CCA005DB959 /* FocusEntity */,
+				66194A652829581200313B8D /* FirebaseAuth */,
 			);
 			productName = CourseWork;
 			productReference = 66F8FBCB281FBC6A005DB959 /* CourseWork.app */;
@@ -347,6 +353,7 @@
 			mainGroup = 66F8FBC2281FBC6A005DB959;
 			packageReferences = (
 				66F8FC4128213CCA005DB959 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+				66194A642829581200313B8D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 66F8FBCC281FBC6A005DB959 /* Products */;
 			projectDirPath = "";
@@ -416,6 +423,7 @@
 				6697D85C28290519008A346F /* ErrorView.swift in Sources */,
 				66F8FC07281FDD26005DB959 /* CustomARView.swift in Sources */,
 				669316D5282145D0001FE388 /* AnswerRow.swift in Sources */,
+				66194A6A282960D300313B8D /* SignUpViewModel.swift in Sources */,
 				669316E028226C51001FE388 /* QuestionModel.swift in Sources */,
 				66F8FBCF281FBC6A005DB959 /* AppDelegate.swift in Sources */,
 			);
@@ -745,6 +753,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		66194A642829581200313B8D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 9.0.0;
+			};
+		};
 		66F8FC4128213CCA005DB959 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
@@ -756,6 +772,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		66194A652829581200313B8D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66194A642829581200313B8D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		66F8FC4228213CCA005DB959 /* FocusEntity */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 66F8FC4128213CCA005DB959 /* XCRemoteSwiftPackageReference "FocusEntity" */;

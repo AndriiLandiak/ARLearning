@@ -11,6 +11,7 @@ import Firebase
 
 struct AccountView: View {
     @ObservedObject var accountVM = AccountViewModel()
+    @ObservedObject var signUp = SignUpViewModel()
     
     @State var showActionSheet: Bool = false
     @State var showImagePicker: Bool = false
@@ -51,6 +52,9 @@ struct AccountView: View {
             }.accentColor(Color("AppColor")).onChange(of: selectedImage) { [] newState in
                 accountVM.savePhoto(photo: (self.selectedImage != nil ? self.selectedImage! : UIImage(systemName: "person")!), user: self.user)
             }
+            Text(signUp.getInformation(user: user)).foregroundColor(Color("AppColor"))
+                .font(.system(size: 25))
+                .padding(.top, 10)
             Text(Auth.auth().currentUser?.email ?? "").foregroundColor(Color("AppColor"))
                 .font(.system(size: 25))
                 .padding(.top, 10)

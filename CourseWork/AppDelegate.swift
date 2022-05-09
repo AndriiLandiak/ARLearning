@@ -8,17 +8,15 @@
 import UIKit
 import SwiftUI
 import FirebaseCore
-import GoogleSignIn
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     lazy var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        GIDSignIn.sharedInstance.clientID
         
         
         let contentView = Home()

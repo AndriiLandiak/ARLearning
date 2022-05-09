@@ -1,5 +1,5 @@
 //
-//  AccountViewModel.swift
+//  SignUpViewModel.swift
 //  CourseWork
 //
 //  Created by Andrew Landiak on 09.05.2022.
@@ -8,26 +8,21 @@
 import Foundation
 import SwiftUI
 
-class AccountViewModel: ObservableObject {
-    func getPhoto(user :String  ) -> UIImage {
-        let fileName = user + ".txt"
+class SignUpViewModel: ObservableObject {
+    func getInformation(user :String) -> String {
+        let fileName = user + "name.txt"
         let data = self.read(fromDocumentsWithFileName: fileName)
         if data == "" {
-            return UIImage(systemName: "person")!
+            return ""
         }
-        return data.toImage()!
+        return data
     }
     
-    func savePhoto(photo: UIImage, user :String) {
-        let fileName = user + ".txt"
-        self.save(text: photo.toPngString() ?? "",
+    func saveInformation(info: String, user: String) {
+        let fileName = user + "name.txt"
+        self.save(text: info,
                       toDirectory: self.documentDirectory(),
                       withFileName: fileName)
-    }
-    
-    func deletePhoto(user: String) {
-        let filename = user + ".txt"
-        self.save(text: UIImage(systemName: "person")?.toPngString() ?? "", toDirectory: self.documentDirectory(), withFileName: filename)
     }
     
     private func save(text: String, toDirectory directory: String, withFileName fileName: String) {
@@ -41,8 +36,6 @@ class AccountViewModel: ObservableObject {
             print("Error", error)
             return
         }
-        
-
     }
     
     private func append(toPath path: String, withPathComponent pathComponent: String) -> String? {
@@ -50,7 +43,6 @@ class AccountViewModel: ObservableObject {
             pathURL.appendPathComponent(pathComponent)
             return pathURL.absoluteString
         }
-        
         return nil
     }
     
@@ -64,10 +56,8 @@ class AccountViewModel: ObservableObject {
         do {
             let savedString = try String(contentsOfFile: filePath)
             return savedString
-        
         } catch {
             return ""
         }
     }
 }
-

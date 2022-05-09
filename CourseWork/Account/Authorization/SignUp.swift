@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 struct SignUp : View {
-
+    @ObservedObject var signUp = SignUpViewModel()
     
     @State var color = Color.black.opacity(0.7)
     @State var firstName = ""
@@ -132,15 +132,22 @@ struct SignUp : View {
     func register() {
         if self.email != "" {
             if self.pass == self.repass {
-                        Auth.auth().createUser(withEmail: self.email, password: self.pass) { (res, err) in
-                            if err != nil{
-                                self.error = err!.localizedDescription
-                                self.alert.toggle()
-                                return
-                            }
-                            UserDefaults.standard.set(true, forKey: "status")
-                            NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                if self.lastName == "" || self.firstName == "" {
+                    self.error = "First name and last name have to be fulfilled "
+                    self.alert.toggle()
+                } else {
+                    Auth.auth().createUser(withEmail: self.email, password: self.pass) { (res, err) in
+                        if err != nil{
+                            self.error = err!.localizedDescription
+                            self.alert.toggle()
+                            return
                         }
+                        UserDefaults.standard.set(true, forKey: "status")
+                        NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                    }
+                }
+                signUp.saveInformation(info: self.firstName + " " + self.lastName, user: self.email)
+                
             }
             else {
                 self.error = "Password mismatch"

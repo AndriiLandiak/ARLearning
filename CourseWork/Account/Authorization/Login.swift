@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Firebase
-import GoogleSignIn
 
 struct Login : View {
     
@@ -26,12 +25,12 @@ var body: some View{
                 VStack{
                     Text("Login")
                         .mainTitle()
-                        .padding(.top, 30)
+                        .padding(.top, 70)
                     TextField("Email", text: self.$email)
                     .autocapitalization(.none)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 4).stroke(self.email != "" ? Color("AppColor") : self.color,lineWidth: 2))
-                    .padding(.top, 35)
+                    .padding(.top, 50)
                     HStack(spacing: 15){
                         VStack{
                             if self.visible{
@@ -59,7 +58,7 @@ var body: some View{
                         }) {
                             Text("Forget password")
                                 .fontWeight(.bold)
-                                .foregroundColor(Color.gray)
+                                .foregroundColor(Color("GreenColor"))
                         }
                     }
                     .padding(.top, 20)
@@ -75,13 +74,12 @@ var body: some View{
                     .cornerRadius(30)
                     .padding(.top, 85)
                     
-                    Text("OR").padding(.top, 5).font(.system(size: 15))
+                    Text("OR").padding(.top, 5).font(.system(size: 15)).foregroundColor((Color("GreenColor")))
                 
                     Button(action: {
 
                         print("nigga")
                     }) {
-
                         Text("Continue with Google")
                             .foregroundColor(.white)
                             .padding(.vertical)
@@ -96,7 +94,7 @@ var body: some View{
                     HStack {
                         Text("Not a Member")
                             .fontWeight(.bold)
-                            .foregroundColor(.gray)
+                            .foregroundColor(Color("GreenColor"))
                         Button(action: {
                             self.show.toggle()
                         }) {
@@ -105,7 +103,7 @@ var body: some View{
                         .sheet(isPresented: self.$show) { SignUp(show: self.$show)}
                         .foregroundColor(Color("AppColor"))
                     }
-                    .padding(.top, 130)
+                    .padding(.top, 100)
                 }
                 .padding(.top, 50)
                 .edgesIgnoringSafeArea(.all)
@@ -154,8 +152,3 @@ var body: some View{
     }
 }
 
-struct LoginPreview: PreviewProvider {
-    static var previews: some View {
-        Login()
-    }
-}
