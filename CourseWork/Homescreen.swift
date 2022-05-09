@@ -6,6 +6,25 @@
 //
 
 import SwiftUI
+import Firebase
+
+struct Home : View {
+    @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
+
+    var body: some View{
+        VStack {
+            if self.status {
+                Homescreen()
+            }else{
+                Login()
+            }
+        }.onAppear {
+            NotificationCenter.default.addObserver(forName: NSNotification.Name("status"), object: nil, queue: .main) { (_) in
+                self.status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
+                }
+            }
+    }
+}
 
 struct Homescreen : View {
     var body: some View {

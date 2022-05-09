@@ -67,14 +67,14 @@ struct ARViewContainer: UIViewRepresentable {
         }
     }
     private func place(_ modelEntity: ModelEntity, in arView: ARView) {
-        let clonedEntity = modelEntity.clone(recursive: true)
-        clonedEntity.generateCollisionShapes(recursive: true)
-        arView.installGestures([.translation, .rotation, .scale], for: clonedEntity)
-        let anchorEntity = AnchorEntity(plane: .any)
-        anchorEntity.addChild(clonedEntity)
-        anchorEntity.name = "MyAnchor"
-        arView.scene.addAnchor(anchorEntity)
-        arView.enableObjectDeletion()
+//        let clonedEntity = modelEntity.clone(recursive: true)
+//        clonedEntity.generateCollisionShapes(recursive: true)
+//        arView.installGestures([.translation, .rotation, .scale], for: clonedEntity)
+//        let anchorEntity = AnchorEntity(plane: .any)
+//        anchorEntity.addChild(clonedEntity)
+//        anchorEntity.name = "MyAnchor"
+//        arView.scene.addAnchor(anchorEntity)
+//        arView.enableObjectDeletion()
     }
 
 }

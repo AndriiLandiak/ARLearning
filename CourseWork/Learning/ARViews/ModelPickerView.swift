@@ -14,7 +14,7 @@ struct ModelPickerView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 30) {
-                ForEach(0 ..< self.models.count) { index in
+                ForEach(0 ..< models.count, id: \.self) { index in
                     Button(action: {
                         self.selectedModel = self.models[index]
                         self.isPlacementEnabled = true

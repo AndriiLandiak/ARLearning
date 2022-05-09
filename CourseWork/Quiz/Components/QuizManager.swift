@@ -24,43 +24,7 @@ class QuizManager: ObservableObject {
             await fetchQuiz()
         }
     }
-    
-//    func fetchQuiz() async {
-//        var link:[String] = []
-//        if link.isEmpty {
-//            let tempURL = URL(string: "https://gist.github.com/AndriiLandiak/8081dcf2142cab62ab47da7068b62466")!
-//            let task = URLSession.shared.dataTask(with: tempURL) {(data, response, error) in
-//                guard let data = data else { return }
-//                let result = (String(data: data, encoding: .utf8)!)
-//                link = self.matches(for: "/raw/[a-z0-9]*/[a-z]*.json", in: result)
-//            }
-//            print("link = ", link)
-//            task.resume()
-//        } else {
-//            print("got matched")
-//            guard let url = URL(string: "https://gist.githubusercontent.com/AndriiLandiak/8081dcf2142cab62ab47da7068b62466" + link[0]) else { fatalError("Missing URL")}
-//            let urlRequest = URLRequest(url: url)
-//            do {
-//                let (data, response) = try await URLSession.shared.data(for: urlRequest)
-//                guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data")}
-//                let decoder = JSONDecoder()
-//                decoder.keyDecodingStrategy = .convertFromSnakeCase
-//                let decodedData = try decoder.decode(QuestionModel.self, from: data)
-//
-//                DispatchQueue.main.async {
-//                    self.reachedEnd = false
-//                    self.index = 0
-//                    self.progress = 0.0
-//                    self.score = 0
-//                    self.quiz = decodedData.results
-//                    self.length = self.quiz.count
-//                    self.setQuestion()
-//                }
-//            } catch {
-//                print("Error - \(error)")
-//            }
-//        }
-//     }
+
     
     func fetchQuiz() async {
         let link = await fetchTempLink()
