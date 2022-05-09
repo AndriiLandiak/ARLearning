@@ -52,27 +52,37 @@ struct AccountView: View {
             }.accentColor(Color("AppColor")).onChange(of: selectedImage) { [] newState in
                 accountVM.savePhoto(photo: (self.selectedImage != nil ? self.selectedImage! : UIImage(systemName: "person")!), user: self.user)
             }
-            Text(signUp.getInformation(user: user)).foregroundColor(Color("AppColor"))
+            Text(signUp.getInformation(user: user)).foregroundColor(Color("GreenColor"))
+                .mainTitle()
                 .font(.system(size: 25))
-                .padding(.top, 10)
-            Text(Auth.auth().currentUser?.email ?? "").foregroundColor(Color("AppColor"))
-                .font(.system(size: 25))
-                .padding(.top, 10)
+                .padding(.top, 20)
             Spacer()
-            Button(action: {
-                try! Auth.auth().signOut()
-                UserDefaults.standard.set(false, forKey: "status")
-                NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+            VStack(spacing: 50) {
+                Button(action: {
+                    print("Settings")
+                }) {
+                    Text("Settings")
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                        .frame(width: UIScreen.main.bounds.width - 50)
+                }
+                .background(Color("AppColor"))
+                .cornerRadius(10)
                 
-            }) {
-                Text("Log out")
-                    .foregroundColor(.white)
-                    .padding(.vertical)
-                    .frame(width: UIScreen.main.bounds.width - 50)
+                Button(action: {
+                    try! Auth.auth().signOut()
+                    UserDefaults.standard.set(false, forKey: "status")
+                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                    
+                }) {
+                    Text("Log out")
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                        .frame(width: UIScreen.main.bounds.width - 50)
+                }            .background(Color("AppColor"))
+                    .cornerRadius(10)
             }
-            .background(Color("AppColor"))
-            .cornerRadius(10)
-            .padding(.bottom, 140)
+            .padding(.bottom, 130)
         }
         .sheet(isPresented: $showImagePicker, content: {
             ImagePicker(image: self.$selectedImage)
@@ -89,9 +99,12 @@ struct AccountManagerHeader: View {
             Text("Personal account")
                 .mainTitle()
                 .frame(minWidth: 0, maxWidth: .infinity)
-                .font(.system(size: 25))
+                .font(.system(size: 30))
+            Rectangle()
+                .frame(maxWidth: UIScreen.screenWidth - 70, maxHeight: 2)
+                .foregroundColor(Color("GreenColor"))
+                .cornerRadius(10)
         }.frame(width: UIScreen.screenWidth, height: 80)
-         .padding(.top, 60)
+         .padding(.top, 40)
     }
 }
-

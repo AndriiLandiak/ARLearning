@@ -14,6 +14,12 @@ extension Text {
             .fontWeight(.heavy)
             .foregroundColor(Color("AppColor"))
     }
+    func username() -> some View {
+        self.font(.title)
+            .font(.callout)
+            .fontWeight(.medium)
+            .foregroundColor((Color("GreenColor")))
+    }
 }
 
 extension UIImage {
