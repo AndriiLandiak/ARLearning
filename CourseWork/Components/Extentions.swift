@@ -14,6 +14,16 @@ extension Text {
             .fontWeight(.heavy)
             .foregroundColor(Color("AppColor"))
     }
+    func animalTitle() -> some View {
+        self.font(.title)
+            .fontWeight(.heavy)
+            .foregroundColor(Color("AppColor"))
+    }
+    func shitTitles() -> some View {
+        self.font(.title2)
+            .fontWeight(.medium)
+            .foregroundColor(Color("AppColor"))
+    }
     func username() -> some View {
         self.font(.title)
             .font(.callout)
@@ -61,5 +71,30 @@ extension UIImage {
         let data = self.jpegData(compressionQuality: cq)
         return data?.base64EncodedString(options: .endLineWithLineFeed)
     }
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+    func replace(string:String, replacement:String) -> String {
+        return self.replacingOccurrences(of: string, with: replacement, options: NSString.CompareOptions.literal, range: nil)
+    }
+
+    func removeWhitespace() -> String {
+        return self.replace(string: " ", replacement: "")
+    }
+
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
+
+extension View {
+
+    func navigationBarColor(backgroundColor: UIColor?, titleColor: UIColor?) -> some View {
+        self.modifier(NavigationBarModifier(backgroundColor: backgroundColor, titleColor: titleColor))
+    }
+
 }
 
