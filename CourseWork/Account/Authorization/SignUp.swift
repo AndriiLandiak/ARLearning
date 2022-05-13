@@ -23,6 +23,7 @@ struct SignUp : View {
     @State var alert = false
     @State var error = ""
 
+    let initVM: InitInformation
     
     var body: some View{
         
@@ -142,6 +143,7 @@ struct SignUp : View {
                             self.alert.toggle()
                             return
                         }
+                        initVM.addInformationCoreData()
                         UserDefaults.standard.set(true, forKey: "status")
                         NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
                     }

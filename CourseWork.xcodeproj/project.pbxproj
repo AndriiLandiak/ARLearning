@@ -14,6 +14,7 @@
 		663947D8282D104600BD1C89 /* LearningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663947D7282D104600BD1C89 /* LearningCell.swift */; };
 		663947DA282D10CB00BD1C89 /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663947D9282D10CB00BD1C89 /* LearningView.swift */; };
 		663947DC282D280700BD1C89 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663947DB282D280700BD1C89 /* NavigationBarModifier.swift */; };
+		66410515282D30E700611DD9 /* InitInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66410514282D30E700611DD9 /* InitInformation.swift */; };
 		668EA8E7282D05B900263C55 /* CoreDataDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 668EA8E5282D05B900263C55 /* CoreDataDB.xcdatamodeld */; };
 		668EA8E9282D074700263C55 /* ManageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668EA8E8282D074700263C55 /* ManageData.swift */; };
 		669316D5282145D0001FE388 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669316D4282145D0001FE388 /* AnswerRow.swift */; };
@@ -73,6 +74,7 @@
 		663947D7282D104600BD1C89 /* LearningCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningCell.swift; sourceTree = "<group>"; };
 		663947D9282D10CB00BD1C89 /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
 		663947DB282D280700BD1C89 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		66410514282D30E700611DD9 /* InitInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitInformation.swift; sourceTree = "<group>"; };
 		668EA8E6282D05B900263C55 /* CoreDataDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataDB.xcdatamodel; sourceTree = "<group>"; };
 		668EA8E8282D074700263C55 /* ManageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageData.swift; sourceTree = "<group>"; };
 		669316D4282145D0001FE388 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				66F8FC50282143EE005DB959 /* ProgressBar.swift */,
 				66F8FC36282137AD005DB959 /* PrimaryButton.swift */,
 				669316D4282145D0001FE388 /* AnswerRow.swift */,
+				66410514282D30E700611DD9 /* InitInformation.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				668EA8E9282D074700263C55 /* ManageData.swift in Sources */,
 				66F8FBD1281FBC6A005DB959 /* Homescreen.swift in Sources */,
 				6697D85C28290519008A346F /* ErrorView.swift in Sources */,
+				66410515282D30E700611DD9 /* InitInformation.swift in Sources */,
 				66F8FC07281FDD26005DB959 /* CustomARView.swift in Sources */,
 				669316D5282145D0001FE388 /* AnswerRow.swift in Sources */,
 				668EA8E7282D05B900263C55 /* CoreDataDB.xcdatamodeld in Sources */,
