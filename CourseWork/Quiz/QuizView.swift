@@ -27,7 +27,7 @@ struct QuizView: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.top)
             .background(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
         }
     }

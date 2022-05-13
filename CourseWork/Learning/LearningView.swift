@@ -8,19 +8,14 @@
 import SwiftUI
 
 struct LearningView: View {
-    
-    init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: Color("AppColor")]
-
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: Color("AppColor")]
-    }
+    var animalVM: LearningViewModel
     
     var body: some View {
         NavigationView {
             ZStack {
                 VStack {
                     HStack {
-                        Image("tv_retro")
+                        Image(animalVM.name)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200, height: 200)
@@ -30,23 +25,23 @@ struct LearningView: View {
                             VStack(alignment: .leading, spacing: 0) {
                                 HStack {
                                     Text("Class:").shitTitles()
-                                    Text("Mammal")
+                                    Text(animalVM.classtype)
                                 }
                                 HStack {
                                     Text("Origin:").shitTitles()
-                                    Text("Africa")
+                                    Text(animalVM.origin)
                                 }
                                 HStack {
                                     Text("Age:").shitTitles()
-                                    Text("17-20")
+                                    Text(animalVM.age)
                                 }
                                 HStack {
                                     Text("Size:").shitTitles()
-                                    Text("100x100")
+                                    Text(animalVM.size)
                                 }
                                 HStack {
                                     Text("Weight:").shitTitles()
-                                    Text("200")
+                                    Text(String(animalVM.weight))
                                 }
                             }
                         }   .frame(width: UIScreen.screenWidth-200, height: 200, alignment: .leading)
@@ -57,11 +52,11 @@ struct LearningView: View {
                     HStack {
                         Text("YouTube: ")
                             .shitTitles()
-                        Text("https://www.youtube.com/watch?v=34vmsE2RiNk&t=797")
+                        Text(animalVM.youtube)
                             .foregroundColor(.blue)
                     }.frame(width: UIScreen.screenWidth - 20, height: 70)
                     ScrollView {
-                        Text("Zebras  are African equines with distinctive black-and-white striped coats. There are three living species: the Grévy's zebra (Equus grevyi), plains zebra (E. quagga), and the mountain zebra (E. zebra). Zebras share the genus Equus with horses and asses, the three groups being the only living members of the family Equidae. Zebra stripes come in different patterns, unique to each individual. Several theories have been proposed for the function of these stripes, with most evidence supporting them as a deterrent for biting flies. Zebras inhabit eastern and southern Africa and can be found in a variety of habitats such as savannahs, grasslands, woodlands, shrublands, and mountainous areas.Zebra stripes come in different patterns, unique to each individual. Several theories have been proposed for the function of these stripes, with most evidence supporting them as a deterrent for biting flies. Zebras inhabit eastern and southern Africa and can be found in a variety of habitats such as savannahs, grasslands, woodlands, shrublands, and mountainous areas.")
+                        Text(animalVM.info)
                             .font(.system(size: 20, weight: .light, design: .serif))
                                 .italic()
                                 .multilineTextAlignment(.center)
@@ -74,24 +69,17 @@ struct LearningView: View {
                         PrimaryButton(text: "AR")
                     }
                 }.frame(width: UIScreen.screenWidth, height: 300)
-            }.edgesIgnoringSafeArea(.all)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarColor(backgroundColor:             UIColor(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118)), titleColor: UIColor(Color("AppColor")))
+            .navigationBarColor(backgroundColor:UIColor(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118)), titleColor: UIColor(Color("AppColor")))
             .toolbar {
                 ToolbarItem(placement: .principal) {
                       VStack {
-                          Text("Zebra").mainTitle()
+                          Text(animalVM.name).mainTitle()
                       }
                   }
             }
         }
-    }
-}
-
-struct LearningView_Previews: PreviewProvider {
-    static var previews: some View {
-        LearningView()
     }
 }

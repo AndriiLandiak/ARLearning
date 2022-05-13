@@ -10,6 +10,7 @@ import Firebase
 
 struct SignUp : View {
     @ObservedObject var signUp = SignUpViewModel()
+    @ObservedObject var initVM = InitInformation()
     
     @State var color = Color.black.opacity(0.7)
     @State var firstName = ""
@@ -22,8 +23,6 @@ struct SignUp : View {
     @Binding var show : Bool
     @State var alert = false
     @State var error = ""
-
-    let initVM: InitInformation
     
     var body: some View{
         

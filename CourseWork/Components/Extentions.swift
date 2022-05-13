@@ -19,11 +19,19 @@ extension Text {
             .fontWeight(.heavy)
             .foregroundColor(Color("AppColor"))
     }
+    func animalTitleNames() -> some View {
+        self.font(.headline)
+            .fontWeight(.medium)
+            .foregroundColor(.black)
+            .italic()
+    }
     func shitTitles() -> some View {
         self.font(.title2)
             .fontWeight(.medium)
             .foregroundColor(Color("AppColor"))
     }
+    
+    
     func username() -> some View {
         self.font(.title)
             .font(.callout)

@@ -15,7 +15,7 @@ class LearningViewModel: Identifiable {
     var name: String
     var origin: String
     var info: String
-    var youtube: URL
+    var youtube: String
     var size: String
     var classtype: String
     var age: String
@@ -26,14 +26,14 @@ class LearningViewModel: Identifiable {
         self.name = animal.name ?? ""
         self.origin = animal.origin ?? ""
         self.info = animal.info ?? ""
-        self.youtube = animal.youtube ?? URL(fileURLWithPath: "")
+        self.youtube = animal.youtube ?? ""
         self.size = animal.size ?? ""
         self.classtype = animal.classtype ?? ""
         self.age = animal.age ?? ""
         self.weight = animal.weight 
     }
     
-    init(id: UUID, name: String, origin: String, info: String, youtube: URL, size: String, classtype: String, age: String, weight: Double) {
+    init(id: UUID, name: String, origin: String, info: String, youtube: String, size: String, classtype: String, age: String, weight: Double) {
         self.id = id
         self.name = name
         self.origin = origin

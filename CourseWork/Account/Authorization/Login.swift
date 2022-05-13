@@ -18,6 +18,7 @@ struct Login : View {
     @State var error = ""
     @State var show = false
     
+    
 var body: some View{
     ZStack{
         ZStack(alignment: .topTrailing) {

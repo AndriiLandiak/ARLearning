@@ -30,7 +30,7 @@ public class ManageData {
         return animals
     }
 
-    func addAnimal(id: UUID, name: String, origin: String, info: String, youtube: URL, size: String, classtype: String, age: String, weight: Double) {
+    func addAnimal(id: UUID, name: String, origin: String, info: String, youtube: String, size: String, classtype: String, age: String, weight: Double) {
         let an = Animal(context: self.managedContext)
         an.id = id
         an.name = name
@@ -61,7 +61,7 @@ public class ManageData {
         }
     }
     
-    func updateAnimal(id: UUID, name: String, origin: String, info: String, youtube: URL, size: String, classtype: String, age: String, weight: Double) {
+    func updateAnimal(id: UUID, name: String, origin: String, info: String, youtube: String, size: String, classtype: String, age: String, weight: Double) {
         let fetchRequest: NSFetchRequest<Animal> = Animal.fetchRequest()
         fetchRequest.predicate = NSPredicate.init(format: "id=%@", id.uuidString)
         do {
