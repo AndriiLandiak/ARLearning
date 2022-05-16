@@ -19,9 +19,6 @@
 		668EA8E9282D074700263C55 /* ManageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668EA8E8282D074700263C55 /* ManageData.swift */; };
 		669316D5282145D0001FE388 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669316D4282145D0001FE388 /* AnswerRow.swift */; };
 		669316D82821460F001FE388 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669316D72821460F001FE388 /* AnswerModel.swift */; };
-		669316DC28215274001FE388 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 669316D928215273001FE388 /* toy_biplane.usdz */; };
-		669316DD28215274001FE388 /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 669316DA28215274001FE388 /* toy_robot_vintage.usdz */; };
-		669316DE28215274001FE388 /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 669316DB28215274001FE388 /* tv_retro.usdz */; };
 		669316E028226C51001FE388 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669316DF28226C51001FE388 /* QuestionModel.swift */; };
 		669316E228226E3B001FE388 /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669316E128226E3B001FE388 /* QuizManager.swift */; };
 		669316E4282279DC001FE388 /* EndGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669316E3282279DC001FE388 /* EndGameView.swift */; };
@@ -48,6 +45,16 @@
 		66F8FC4D28214292005DB959 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FC4C28214292005DB959 /* Extentions.swift */; };
 		66F8FC4F2821432D005DB959 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FC4E2821432D005DB959 /* QuestionView.swift */; };
 		66F8FC51282143EE005DB959 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8FC50282143EE005DB959 /* ProgressBar.swift */; };
+		66FE6BA728323D99007D3B7C /* Skunk.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66FE6B9D28323D97007D3B7C /* Skunk.usdz */; };
+		66FE6BA828323D99007D3B7C /* Zebra.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66FE6B9E28323D98007D3B7C /* Zebra.usdz */; };
+		66FE6BA928323D99007D3B7C /* Rhino.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66FE6B9F28323D98007D3B7C /* Rhino.usdz */; };
+		66FE6BAA28323D99007D3B7C /* Elk.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66FE6BA028323D98007D3B7C /* Elk.usdz */; };
+		66FE6BAB28323D99007D3B7C /* Gorilla.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66FE6BA128323D98007D3B7C /* Gorilla.usdz */; };
+		66FE6BAC28323D99007D3B7C /* Elephant.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66FE6BA228323D98007D3B7C /* Elephant.usdz */; };
+		66FE6BAD28323D99007D3B7C /* Turtle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66FE6BA328323D99007D3B7C /* Turtle.usdz */; };
+		66FE6BAE28323D99007D3B7C /* Cattle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66FE6BA428323D99007D3B7C /* Cattle.usdz */; };
+		66FE6BAF28323D99007D3B7C /* Deer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66FE6BA528323D99007D3B7C /* Deer.usdz */; };
+		66FE6BB028323D99007D3B7C /* Shark.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 66FE6BA628323D99007D3B7C /* Shark.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,9 +86,6 @@
 		668EA8E8282D074700263C55 /* ManageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageData.swift; sourceTree = "<group>"; };
 		669316D4282145D0001FE388 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 		669316D72821460F001FE388 /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
-		669316D928215273001FE388 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
-		669316DA28215274001FE388 /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot_vintage.usdz; sourceTree = "<group>"; };
-		669316DB28215274001FE388 /* tv_retro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv_retro.usdz; sourceTree = "<group>"; };
 		669316DF28226C51001FE388 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		669316E128226E3B001FE388 /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		669316E3282279DC001FE388 /* EndGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameView.swift; sourceTree = "<group>"; };
@@ -110,6 +114,16 @@
 		66F8FC4C28214292005DB959 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		66F8FC4E2821432D005DB959 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		66F8FC50282143EE005DB959 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		66FE6B9D28323D97007D3B7C /* Skunk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Skunk.usdz; sourceTree = "<group>"; };
+		66FE6B9E28323D98007D3B7C /* Zebra.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Zebra.usdz; sourceTree = "<group>"; };
+		66FE6B9F28323D98007D3B7C /* Rhino.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Rhino.usdz; sourceTree = "<group>"; };
+		66FE6BA028323D98007D3B7C /* Elk.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Elk.usdz; sourceTree = "<group>"; };
+		66FE6BA128323D98007D3B7C /* Gorilla.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Gorilla.usdz; sourceTree = "<group>"; };
+		66FE6BA228323D98007D3B7C /* Elephant.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Elephant.usdz; sourceTree = "<group>"; };
+		66FE6BA328323D99007D3B7C /* Turtle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Turtle.usdz; sourceTree = "<group>"; };
+		66FE6BA428323D99007D3B7C /* Cattle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Cattle.usdz; sourceTree = "<group>"; };
+		66FE6BA528323D99007D3B7C /* Deer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Deer.usdz; sourceTree = "<group>"; };
+		66FE6BA628323D99007D3B7C /* Shark.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Shark.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,9 +252,16 @@
 		66F8FBFA281FBF97005DB959 /* ARModels */ = {
 			isa = PBXGroup;
 			children = (
-				669316D928215273001FE388 /* toy_biplane.usdz */,
-				669316DA28215274001FE388 /* toy_robot_vintage.usdz */,
-				669316DB28215274001FE388 /* tv_retro.usdz */,
+				66FE6BA428323D99007D3B7C /* Cattle.usdz */,
+				66FE6BA528323D99007D3B7C /* Deer.usdz */,
+				66FE6BA228323D98007D3B7C /* Elephant.usdz */,
+				66FE6BA028323D98007D3B7C /* Elk.usdz */,
+				66FE6BA128323D98007D3B7C /* Gorilla.usdz */,
+				66FE6B9F28323D98007D3B7C /* Rhino.usdz */,
+				66FE6BA628323D99007D3B7C /* Shark.usdz */,
+				66FE6B9D28323D97007D3B7C /* Skunk.usdz */,
+				66FE6BA328323D99007D3B7C /* Turtle.usdz */,
+				66FE6B9E28323D98007D3B7C /* Zebra.usdz */,
 			);
 			path = ARModels;
 			sourceTree = "<group>";
@@ -411,11 +432,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				669316DD28215274001FE388 /* toy_robot_vintage.usdz in Resources */,
-				669316DC28215274001FE388 /* toy_biplane.usdz in Resources */,
+				66FE6BA928323D99007D3B7C /* Rhino.usdz in Resources */,
 				66F8FBD8281FBC6E005DB959 /* Preview Assets.xcassets in Resources */,
-				669316DE28215274001FE388 /* tv_retro.usdz in Resources */,
+				66FE6BAB28323D99007D3B7C /* Gorilla.usdz in Resources */,
+				66FE6BAC28323D99007D3B7C /* Elephant.usdz in Resources */,
+				66FE6BAA28323D99007D3B7C /* Elk.usdz in Resources */,
+				66FE6BAF28323D99007D3B7C /* Deer.usdz in Resources */,
+				66FE6BA828323D99007D3B7C /* Zebra.usdz in Resources */,
 				66F8FBD5281FBC6E005DB959 /* Assets.xcassets in Resources */,
+				66FE6BAD28323D99007D3B7C /* Turtle.usdz in Resources */,
+				66FE6BB028323D99007D3B7C /* Shark.usdz in Resources */,
+				66FE6BAE28323D99007D3B7C /* Cattle.usdz in Resources */,
+				66FE6BA728323D99007D3B7C /* Skunk.usdz in Resources */,
 				6697D86D28290A5A008A346F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

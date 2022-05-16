@@ -9,11 +9,12 @@ import SwiftUI
 
 struct LearningList: View {
     @ObservedObject var learningVM = LearningListViewModel()
+    var models: [Model]
     var body: some View {
         NavigationView {
             List(learningVM.animals, id: \.id) { animal in
                 NavigationLink(
-                    destination: LearningView(animalVM: animal)) {
+                    destination: LearningView(animalVM: animal, arModels: models)) {
                         LearningCell(animalVM: animal).padding(.leading, 20)
                     }
             }
@@ -21,6 +22,7 @@ struct LearningList: View {
         }
         .onAppear() {
             learningVM.fetchAllInformation()
+            
         }
     }
 }

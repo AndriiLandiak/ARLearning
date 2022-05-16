@@ -15,6 +15,28 @@ struct MainARView : View {
     @State private var selectedModel: Model?
     @State private var modelConfirmedForPlacement: Model?
     
+    var animalName: String
+    var models: [Model]
+
+    var body: some View {
+        ZStack(alignment: .bottom) {
+            ARViewContainer(selectedModel: $selectedModel, modelConfirmedForPlacement: $modelConfirmedForPlacement)
+            if self.isPlacementEnabled {
+                ButtonPlacementView(isPlacementEnabled: self.$isPlacementEnabled, selectedModel: $selectedModel, modelConfirmedForPlacement: $modelConfirmedForPlacement)
+            } else {
+                ModelPickerView(isPlacementEnabled: self.$isPlacementEnabled, selectedModel: $selectedModel, animalName: animalName, models: self.models)
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .background(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
+    }
+}
+
+struct MainARViewForAllAnimals : View {
+    @State private var isPlacementEnabled = false
+    @State private var selectedModel: Model?
+    @State private var modelConfirmedForPlacement: Model?
+    
     private var models: [Model] = {
         let filemanager = FileManager.default
         guard let path = Bundle.main.resourcePath, let files = try? filemanager.contentsOfDirectory(atPath: path) else {
@@ -35,11 +57,8 @@ struct MainARView : View {
             if self.isPlacementEnabled {
                 ButtonPlacementView(isPlacementEnabled: self.$isPlacementEnabled, selectedModel: $selectedModel, modelConfirmedForPlacement: $modelConfirmedForPlacement)
             } else {
-                ModelPickerView(isPlacementEnabled: self.$isPlacementEnabled, selectedModel: $selectedModel, models: self.models)
+                ModelPickerViewForAllAnimals(isPlacementEnabled: self.$isPlacementEnabled, selectedModel: $selectedModel, models: self.models)
             }
-        }
-        .onDisappear() {
-            
         }
         .navigationBarTitleDisplayMode(.inline)
         .background(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
@@ -67,24 +86,24 @@ struct ARViewContainer: UIViewRepresentable {
         }
     }
     private func place(_ modelEntity: ModelEntity, in arView: ARView) {
-//        let clonedEntity = modelEntity.clone(recursive: true)
-//        clonedEntity.generateCollisionShapes(recursive: true)
-//        arView.installGestures([.translation, .rotation, .scale], for: clonedEntity)
-//        let anchorEntity = AnchorEntity(plane: .any)
-//        anchorEntity.addChild(clonedEntity)
-//        anchorEntity.name = "MyAnchor"
-//        arView.scene.addAnchor(anchorEntity)
-//        arView.enableObjectDeletion()
+        let clonedEntity = modelEntity.clone(recursive: true)
+        clonedEntity.generateCollisionShapes(recursive: true)
+        arView.installGestures([.translation, .rotation, .scale], for: clonedEntity)
+        let anchorEntity = AnchorEntity(plane: .any)
+        anchorEntity.addChild(clonedEntity)
+        anchorEntity.name = "MyAnchor"
+        arView.scene.addAnchor(anchorEntity)
+        arView.enableObjectDeletion()
     }
 
 }
 
 class SceneManager: ObservableObject {
     @Published var isPersistenceAvailable: Bool = false
-    @Published var anchorEntities: [AnchorEntity] = [] // Keeps track of anchorEntities (w/ modelEntities) in the scene.
+    @Published var anchorEntities: [AnchorEntity] = []
     
-    var shouldSaveSceneToFilesystem: Bool = false // Flag to trigger save scene to filesystem function
-    var shouldLoadSceneFromFilesystem: Bool = false // Flag to trigger load scene from filesystem function
+    var shouldSaveSceneToFilesystem: Bool = false
+    var shouldLoadSceneFromFilesystem: Bool = false
     
     lazy var persistenceUrl: URL = {
         do {
