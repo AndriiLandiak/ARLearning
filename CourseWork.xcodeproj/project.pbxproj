@@ -231,11 +231,11 @@
 				663947D4282D0EA300BD1C89 /* ViewModels */,
 				669316D6282145FB001FE388 /* Models */,
 				668EA8E4282D059000263C55 /* Database */,
+				66F8FBFA281FBF97005DB959 /* ARModels */,
 				6697D87D28292338008A346F /* Components */,
 				66F8FBCE281FBC6A005DB959 /* AppDelegate.swift */,
 				66F8FBD4281FBC6E005DB959 /* Assets.xcassets */,
 				6697D86C28290A5A008A346F /* GoogleService-Info.plist */,
-				66F8FBFA281FBF97005DB959 /* ARModels */,
 				66F8FBD6281FBC6E005DB959 /* Preview Content */,
 			);
 			path = CourseWork;
