@@ -48,6 +48,5 @@ struct Homescreen : View {
             QuizView().tabItem { Label("Quiz", systemImage: "circle.grid.cross")}
         }.colorMultiply(Color(red: 0.9843113725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
             .edgesIgnoringSafeArea(.top)
-            .accentColor(.black)
-    }
+            .accentColor(.black) }
 }

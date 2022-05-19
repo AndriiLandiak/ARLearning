@@ -42,3 +42,4 @@ struct LearningCell: View {
             .padding(.leading, 0)
     }
 }
+
